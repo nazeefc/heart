@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.heart {
+  height: 90px;
+  width: 90px;
+  background-color: #f20044;
+  position: relative;
+  transform: rotate(-45deg);
+  box-shadow: -10px 10px 90px #f20044;
+  animation: heart 0.6s linear infinite;
+}
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+.heart::before {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #f20044;
+  top: -50%;
+  border-radius: 50px;
+  box-shadow: -10px 10px 90px #f20044;
+}
+.heart::after {
+  content: "";
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  background-color: #f20044;
+  right: -50%;
+  border-radius: 50px;
+  box-shadow: -10px 10px 90px #f20044;
+}
+H1 {
+  color: #eaeaea;
+  position: absolute;
+  top: 55%;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+  text-shadow: 0px 0px 10px #f20044, 0px 0px 30px #f20044, 0px 0px 60px #f20044,
+    0px 0px 190px #f20044, 0px 0px 120px #f20044;
+}
+H2 {
+  color: #f20044;
+  position: absolute;
+  top: 60%;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+}
+H3 {
+  color: #ffffff;
+  position: absolute;
+  top: 20%;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px #f20044, 0px 0px 30px #f20044, 0px 0px 60px #f20044,
+    0px 0px 190px #f20044, 0px 0px 120px #f20044;
+}
